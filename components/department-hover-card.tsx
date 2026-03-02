@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import { useRouter } from "next/navigation"
 import { Users, ExternalLink, Search, Mail } from "lucide-react"
 import {
   Sheet,
@@ -36,6 +37,7 @@ export function DepartmentMemberSheet({
 }: {
   department: Department
 }) {
+  const router = useRouter()
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState("")
 
@@ -160,8 +162,8 @@ export function DepartmentMemberSheet({
               variant="outline"
               className="w-full gap-2"
               onClick={() => {
-                // In a real app, navigate to department edit page
                 setOpen(false)
+                router.push("/departments")
               }}
             >
               <ExternalLink className="size-4" />

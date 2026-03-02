@@ -1,11 +1,12 @@
-import { Users, Settings, LayoutDashboard, UserCog } from "lucide-react"
+import Link from "next/link"
+import { Settings, LayoutDashboard, UserCog, Building2 } from "lucide-react"
 import { AdminUserTable } from "@/components/admin-user-table"
 
 const NAV_ITEMS = [
-  { label: "ダッシュボード", icon: LayoutDashboard, active: false },
-  { label: "ユーザー管理", icon: UserCog, active: true },
-  { label: "部署ページ編集", icon: Users, active: false },
-  { label: "設定", icon: Settings, active: false },
+  { label: "ダッシュボード", icon: LayoutDashboard, href: "/", active: false },
+  { label: "ユーザー管理", icon: UserCog, href: "/", active: true },
+  { label: "部署ページ編集", icon: Building2, href: "/departments", active: false },
+  { label: "設定", icon: Settings, href: "/", active: false },
 ]
 
 export default function Page() {
@@ -22,10 +23,11 @@ export default function Page() {
           </span>
         </div>
         <nav className="p-2">
-          <ul className="space-y-0.5" role="list">
+          <ul className="flex flex-col gap-0.5" role="list">
             {NAV_ITEMS.map((item) => (
               <li key={item.label}>
-                <button
+                <Link
+                  href={item.href}
                   className={`flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
                     item.active
                       ? "bg-accent font-medium text-accent-foreground"
@@ -34,7 +36,7 @@ export default function Page() {
                 >
                   <item.icon className="size-4" />
                   {item.label}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
