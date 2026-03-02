@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: '管理コンソール',
-  description: 'HoverCard UIパターン デモ',
+  description: 'Sheet UIパターン デモ - 部署メンバー全員閲覧',
   generator: 'v0.app',
   icons: {
     icon: [
