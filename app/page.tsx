@@ -53,8 +53,8 @@ export default function Page() {
           {/* Description */}
           <div className="mb-6 rounded-lg border border-dashed bg-accent/30 p-4">
             <p className="text-sm leading-relaxed text-foreground">
-              <strong>{"HoverCard デモ:"}</strong>
-              {" 下のテーブルの「所属部署」列にある部署名にマウスをホバーしてください。部署のメンバー一覧がカードで表示されます。編集は「部署ページ編集」メニューへ誘導されます。"}
+              <strong>{"Sheet (サイドドロワー) デモ:"}</strong>
+              {" 下のテーブルの「所属部署」列にある部署名をクリックしてください。右からスライドインするパネルで、部署の全メンバー一覧を確認できます。検索フィルタで絞り込みも可能です。編集は「部署ページ編集」メニューへ誘導されます。"}
             </p>
           </div>
 
